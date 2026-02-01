@@ -131,7 +131,7 @@
         default_layer {    // Layer 0
             bindings = <
 &kp Q       &kp W       &kp E        &kp R          &kp T                                       &kp Y      &kp U        &kp I            &kp O         &kp P
-&kp A       &kp S       &kp D        &kp F          &kp G        &none           &td_lang       &kp H      &kp J        &kp K            &kp L         &lt 3 MINUS
+&kp A       &kp S       &kp D        &kp F          &kp G        &ind_bat        &td_lang       &kp H      &kp J        &kp K            &kp L         &lt 3 MINUS
 &mt LWIN Z  &mt LALT X  &mt LCTRL C  &mt LSHFT V    &kp B        &mt LCTRL TAB   &mt LCTRL TAB  &kp N      &mt RSHFT M  &mt RCTRL COMMA  &mt RALT DOT  &mt RWIN SLASH
 &none       &none       &none        &mt LCTRL TAB  &lt 1 SPACE  &lt 2  ENTER    &lt 2 BSPC     &kp LSHFT                                              &lt 4 ESCAPE
             >;
