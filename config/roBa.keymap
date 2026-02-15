@@ -104,15 +104,35 @@
             tapping-term-ms = <200>;
             bindings = <&kp LANG1>, <&kp LANG2>;
         };
-    };
 
-    behaviors {
         td_ind: tap_dance_indicator {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&ind_bat>, <&ind_con>;
         };
+        
+        td_bspc: tap_dance_bkspace {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <120>;
+            bindings = <&lt 2 BSPC>, <&kp BSPC>;
+        };
+
+        td_enter: tap_dance_enter {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <120>;
+            bindings = <&lt 2 ENTER>, <&kp ENTER>;
+        };
+
+        td_space: tap_dance_space {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <120>;
+            bindings = <&lt 1 SPACE>, <&kp SPACE>;
+        };
+
     };
 
     macros {
@@ -140,10 +160,10 @@
 
         default_layer {    // Layer 0
             bindings = <
-&kp Q       &kp W       &kp E        &kp R          &kp T                                       &kp Y      &kp U        &kp I            &kp O         &kp P
-&kp A       &kp S       &kp D        &kp F          &kp G        &td_ind         &td_lang       &kp H      &kp J        &kp K            &kp L         &lt 3 MINUS
-&mt LWIN Z  &mt LALT X  &mt LCTRL C  &mt LSHFT V    &kp B        &mt LCTRL TAB   &mt LCTRL TAB  &kp N      &mt RSHFT M  &mt RCTRL COMMA  &mt RALT DOT  &mt RWIN SLASH
-&none       &none       &none        &mt LCTRL TAB  &lt 1 SPACE  &lt 2 ENTER     &lt 2 BSPC     &kp LSHFT                                              &lt 4 ESCAPE
+&kp Q       &kp W       &kp E        &kp R          &kp T                                      &kp Y      &kp U        &kp I            &kp O         &kp P
+&kp A       &kp S       &kp D        &kp F          &kp G      &td_ind          &td_lang       &kp H      &kp J        &kp K            &kp L         &lt 3 MINUS
+&mt LWIN Z  &mt LALT X  &mt LCTRL C  &mt LSHFT V    &kp B      &mt LCTRL TAB    &mt LCTRL TAB  &kp N      &mt RSHFT M  &mt RCTRL COMMA  &mt RALT DOT  &mt RWIN SLASH
+&none       &none       &none        &mt LCTRL TAB  &td_space  &td_enter        &td_bspc       &kp LSHFT                                              &lt 4 ESCAPE
             >;
 
             // sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
