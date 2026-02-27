@@ -33,11 +33,6 @@
 
         lang {
             bindings = <&kp LC(SPACE)>;
-            key-positions = <13 18>; /* F + J */
-        };
-
-        lang2 {
-            bindings = <&kp LC(SPACE)>;
             key-positions = <18 21>; /* J + - */
         };
 
@@ -50,10 +45,10 @@
             bindings = <&kp TAB>;
             key-positions = <1 2>; /* W + Q */
         };
-        
-        esc2 {
-            bindings = <&kp ESCAPE>;
-            key-positions = <5 6>; /* Y + U */
+
+        bspc {
+            bindings = <&kp BSPC>;
+            key-positions = <6 7>; /* U + I */
         };
 
         del {
@@ -65,6 +60,7 @@
             bindings = <&kp ENTER>;
             key-positions = <8 9>; /* O + P */
         };
+
 
         mb1 {
             bindings = <&mkp MB1>;
