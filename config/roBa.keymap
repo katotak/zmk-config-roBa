@@ -31,19 +31,14 @@
     combos {
         compatible = "zmk,combos";
 
-        lang {
-            bindings = <&kp LC(SPACE)>;
-            key-positions = <18 21>; /* J + - */
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <1 2>; /* W + Q */
         };
 
         esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <0 1>; /* Q + W */
-        };
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <1 2>; /* W + Q */
+            key-positions = <5 6>; /* Y + U */
         };
 
         bspc {
@@ -87,10 +82,6 @@
             key-positions = <20 21>; /* L + - */
         };
 
-        mb6 {
-            bindings = <&kp LC(W)>;
-            key-positions = <17 21>; /* H + - */
-        };
     };
 
     behaviors {
