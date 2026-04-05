@@ -126,7 +126,7 @@
         default_layer {    // Layer 0
             bindings = <
 &kp Q       &kp W       &kp E        &kp R        &kp T                                        &kp Y      &kp U        &kp I            &kp O         &kp P
-&kp A       &kp S       &kp D        &kp F        &kp G        &td_ind          &td_lang       &kp H      &kp J        &kp K            &kp L         &lt 3 MINUS
+&kp A       &kp S       &mt LCTRL D  &kp F        &kp G        &td_ind          &td_lang       &kp H      &kp J        &kp K            &kp L         &lt 3 MINUS
 &mt LWIN Z  &mt LALT X  &mt LCTRL C  &mt LSHFT V  &kp B        &mt LCTRL TAB    &mt LCTRL TAB  &kp N      &mt RSHFT M  &mt RCTRL COMMA  &mt RALT DOT  &mt RWIN SLASH
 &none       &none       &none        &none        &lt 1 SPACE  &lt 2 ENTER      &lt 2 BSPC     &kp LSHFT                                              &mo 4
             >;
@@ -136,7 +136,7 @@
             bindings = <
             
 &kp N1        &kp N2         &kp N3          &kp N4           &kp N5                       &kp N6  &kp N7     &kp N8          &kp N9         &kp N0
-&kp PSCRN     &kp HOME       &kp UP          &kp END          &kp PG_UP  &trans    &trans  &none   &kp GRAVE  &kp EQUAL       &kp SEMI       &kp SQT
+&kp PSCRN     &kp HOME       &mt LCTRL UP    &kp END          &kp PG_UP  &trans    &trans  &none   &kp GRAVE  &kp EQUAL       &kp SEMI       &kp SQT
 &mt LWIN INS  &mt LALT LEFT  &mt LCTRL DOWN  &mt LSHFT RIGHT  &kp PG_DN  &trans    &trans  &none   &kp RSHFT  &mt RCTRL LBKT  &mt RALT RBKT  &mt RWIN BSLH
 &trans        &trans         &trans          &trans           &trans     &trans    &trans  &trans                                            &trans
             >;
