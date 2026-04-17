@@ -11,17 +11,17 @@ layers:
   - I
   - O
   - P
-  - A
-  - S
+  - {t: A, h: LWIN}
+  - {t: S, h: LALT}
   - {t: D, h: LCTRL}
-  - F
+  - {t: F, h: LSHFT}
   - G
   - '&td_ind'
   - '&td_lang'
   - H
-  - J
-  - K
-  - L
+  - {t: J, h: RSHFT}
+  - {t: K, h: RCTRL}
+  - {t: L, h: LALT}
   - {t: '-', h: SCROLL}
   - {t: Z, h: LWIN}
   - {t: X, h: LALT}
@@ -34,7 +34,7 @@ layers:
   - {t: M, h: RSHFT}
   - {t: ',', h: RCTRL}
   - {t: ., h: RALT}
-  - {t: /, h: RWIN}
+  - /
   - ''
   - ''
   - ''
@@ -55,17 +55,17 @@ layers:
   - '8'
   - '9'
   - '0'
-  - PSCRN
-  - HOME
+  - {t: PSCRN, h: LWIN}
+  - {t: HOME, h: LALT}
   - {t: UP, h: LCTRL}
-  - END
+  - {t: END, h: LSHFT}
   - PG UP
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
-  - '`'
-  - '='
-  - ;
+  - {t: '`', h: RSHFT}
+  - {t: '=', h: RCTRL}
+  - {t: ;, h: RALT}
   - ''''
   - {t: INS, h: LWIN}
   - {t: LEFT, h: LALT}
@@ -78,7 +78,7 @@ layers:
   - RSHFT
   - {t: '[', h: RCTRL}
   - {t: ']', h: RALT}
-  - {t: \, h: RWIN}
+  - \
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -107,9 +107,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - PSCRN
-  - HOME
-  - UP
-  - END
+  - {t: HOME, h: LALT}
+  - {t: UP, h: LCTRL}
+  - {t: END, h: LSHFT}
   - PG UP
   - F11
   - F12
@@ -119,10 +119,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - INS
-  - {t: LEFT, h: RSHFT}
-  - {t: DOWN, h: RCTRL}
-  - {t: RIGHT, h: RALT}
-  - {t: PG DN, h: RWIN}
+  - {t: LEFT, h: LALT}
+  - {t: DOWN, h: LCTRL}
+  - {t: RIGHT, h: LSHFT}
+  - PG DN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -221,6 +221,8 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
 combos:
+- p: [0, 1]
+  k: ESCAPE
 - p: [1, 2]
   k: TAB
 - p: [5, 6]
@@ -241,3 +243,7 @@ combos:
   k: '&mkp MB4'
 - p: [20, 21]
   k: '&mkp MB5'
+- p: [17, 20]
+  k: Ctl+W
+- p: [18, 21]
+  k: Ctl+SPACE
