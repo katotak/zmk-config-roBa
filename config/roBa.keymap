@@ -6,7 +6,7 @@
 
 &mt {
     flavor = "balanced";
-    quick-tap-ms = <0>;
+    quick-tap-ms = <200>;
 };
 
 &trackball {
@@ -31,12 +31,7 @@
     combos {
         compatible = "zmk,combos";
 
-        lang {
-            bindings = <&kp LC(SPACE)>;
-            key-positions = <18 21>; /* J + - */
-        };
-
-        esc {
+        esc_l {
             bindings = <&kp ESCAPE>;
             key-positions = <0 1>; /* Q + W */
         };
@@ -44,6 +39,11 @@
         tab {
             bindings = <&kp TAB>;
             key-positions = <1 2>; /* W + Q */
+        };
+
+        esc_r {
+            bindings = <&kp ESCAPE>;
+            key-positions = <5 6>; /* Y + U */
         };
 
         bspc {
@@ -89,7 +89,12 @@
 
         mb6 {
             bindings = <&kp LC(W)>;
-            key-positions = <17 21>; /* H + - */
+            key-positions = <17 20>; /* H + L */
+        };
+        
+        lang {
+            bindings = <&kp LC(SPACE)>;
+            key-positions = <18 21>; /* J + - */
         };
     };
 
@@ -135,45 +140,45 @@
         default_layer {    // Layer 0
             bindings = <
 &kp Q       &kp W       &kp E        &kp R        &kp T                                        &kp Y      &kp U        &kp I            &kp O         &kp P
-&kp A       &kp S       &kp D        &kp F        &kp G        &td_ind          &td_lang       &kp H      &kp J        &kp K            &kp L         &lt 3 MINUS
-&mt LWIN Z  &mt LALT X  &mt LCTRL C  &mt LSHFT V  &kp B        &mt LCTRL TAB    &mt LCTRL TAB  &kp N      &mt RSHFT M  &mt RCTRL COMMA  &mt RALT DOT  &mt RWIN SLASH
-&none       &none       &none        &none        &lt 1 SPACE  &lt 2 ENTER      &lt 2 BSPC     &kp LSHFT                                              &lt 4 ESCAPE
+&mt LWIN A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G        &td_ind          &td_lang       &kp H      &mt RSHFT J  &mt RCTRL K      &mt LALT L    &lt 3 MINUS
+&mt LWIN Z  &mt LALT X  &mt LCTRL C  &mt LSHFT V  &kp B        &mt LCTRL TAB    &mt LCTRL TAB  &kp N      &mt RSHFT M  &mt RCTRL COMMA  &mt RALT DOT  &mt LWIN SLASH
+&none       &none       &none        &none        &lt 1 SPACE  &lt 2 ENTER      &lt 2 BSPC     &kp LSHFT                                              &mo 4
             >;
         };
 
         NUMSYM {    // Layer 1
             bindings = <
             
-&kp N1        &kp N2         &kp N3          &kp N4           &kp N5                       &kp N6  &kp N7     &kp N8          &kp N9         &kp N0
-&kp PSCRN     &kp HOME       &kp UP          &kp END          &kp PG_UP  &trans    &trans  &none   &kp GRAVE  &kp EQUAL       &kp SEMI       &kp SQT
-&mt LWIN INS  &mt LALT LEFT  &mt LCTRL DOWN  &mt LSHFT RIGHT  &kp PG_DN  &trans    &trans  &none   &kp RSHFT  &mt RCTRL LBKT  &mt RALT RBKT  &mt RWIN BSLH
-&trans        &trans         &trans          &trans           &trans     &trans    &trans  &trans                                            &trans
+&kp N1          &kp N2         &kp N3          &kp N4           &kp N5                       &kp N6  &kp N7           &kp N8           &kp N9         &kp N0
+&mt LWIN PSCRN  &mt LALT HOME  &mt LCTRL UP    &mt LSHFT END    &kp PG_UP  &trans    &trans  &none   &mt RSHFT GRAVE  &mt RCTRL EQUAL  &mt RALT SEMI  &kp SQT
+&mt LWIN INS    &mt LALT LEFT  &mt LCTRL DOWN  &mt LSHFT RIGHT  &kp PG_DN  &trans    &trans  &none   &kp RSHFT        &mt RCTRL LBKT   &mt RALT RBKT  &mt LWIN BSLH
+&trans          &trans         &trans          &trans           &trans     &trans    &trans  &trans                                                   &trans
             >;
         };
 
         FUNCTION {    // Layer 2
             bindings = <
-&kp F1   &kp F2   &kp F3   &kp F4   &kp F5                     &none      &none           &kp C_VOL_DN    &kp C_VOL_UP    &kp C_MUTE
-&kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &trans    &trans  &kp PSCRN  &kp HOME        &kp UP          &kp END         &kp PG_UP  
-&kp F11  &kp F12  &none    &none    &none    &trans    &trans  &kp INS    &mt RSHFT LEFT  &mt RCTRL DOWN  &mt RALT RIGHT  &mt RWIN PG_DN
+&kp F1   &kp F2   &kp F3   &kp F4   &kp F5                     &none      &none          &kp C_VOL_DN    &kp C_VOL_UP     &kp C_MUTE
+&kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &trans    &trans  &kp PSCRN  &mt LALT HOME  &mt LCTRL UP    &mt LSHFT END    &kp PG_UP  
+&kp F11  &kp F12  &none    &none    &none    &trans    &trans  &kp INS    &mt LALT LEFT  &mt LCTRL DOWN  &mt LSHFT RIGHT  &kp PG_DN
 &trans   &trans   &trans   &trans   &trans   &trans    &trans  &trans                                                     &trans
             >;
         };
 
         SCROLL {    // Layer 3
             bindings = <
-&none   &none   &none   &none   &none                       &none   &kp N7  &kp N8  &kp N9  &none
-&none   &none   &none   &none   &none   &trans      &trans  &none   &kp N4  &kp N5  &kp N6  &none
-&none   &none   &none   &none   &none   &trans      &trans  &kp N0  &kp N1  &kp N2  &kp N3  &none
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&none   &none   &none   &none   &none                     &none   &kp N7  &kp N8  &kp N9  &none
+&none   &none   &none   &none   &none   &trans    &trans  &none   &kp N4  &kp N5  &kp N6  &none
+&none   &none   &none   &none   &none   &trans    &trans  &kp N0  &kp N1  &kp N2  &kp N3  &none
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
             >;
         };
 
         SETTING {    // Layer 4
             bindings = <
-&none   &none   &none   &none   &none                     &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&none   &none   &none   &none   &none   &trans    &trans  &bt BT_CLR    &bt BT_CLR_ALL  &none         &none         &none
-&none   &none   &none   &none   &none   &trans    &trans  &none         &none           &none         &none         &none
+&none   &none   &none   &none   &none                     &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&none   &none   &none   &none   &none   &trans    &trans  &bt BT_CLR      &none         &none         &none         &none
+&none   &none   &none   &none   &none   &trans    &trans  &bt BT_CLR_ALL  &none         &none         &none         &none
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                                    &trans
             >;
         };
