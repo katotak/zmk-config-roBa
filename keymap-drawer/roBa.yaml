@@ -34,7 +34,7 @@ layers:
   - {t: M, h: RSHFT}
   - {t: ',', h: RCTRL}
   - {t: ., h: RALT}
-  - /
+  - {t: /, h: LWIN}
   - ''
   - ''
   - ''
@@ -78,7 +78,7 @@ layers:
   - RSHFT
   - {t: '[', h: RCTRL}
   - {t: ']', h: RALT}
-  - \
+  - {t: \, h: LWIN}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
