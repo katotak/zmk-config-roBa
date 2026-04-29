@@ -141,7 +141,7 @@
             bindings = <
 &kp Q       &kp W       &kp E        &kp R        &kp T                                        &kp Y      &kp U        &kp I            &kp O         &kp P
 &mt LWIN A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G        &td_ind          &td_lang       &kp H      &mt RSHFT J  &mt RCTRL K      &mt LALT L    &lt 3 MINUS
-&mt LWIN Z  &mt LALT X  &mt LCTRL C  &mt LSHFT V  &kp B        &mt LCTRL TAB    &mt LCTRL TAB  &kp N      &mt RSHFT M  &mt RCTRL COMMA  &mt RALT DOT  &kp SLASH
+&mt LWIN Z  &mt LALT X  &mt LCTRL C  &mt LSHFT V  &kp B        &mt LCTRL TAB    &mt LCTRL TAB  &kp N      &mt RSHFT M  &mt RCTRL COMMA  &mt RALT DOT  &mt LWIN SLASH
 &none       &none       &none        &none        &lt 1 SPACE  &lt 2 ENTER      &lt 2 BSPC     &kp LSHFT                                              &mo 4
             >;
         };
@@ -151,7 +151,7 @@
             
 &kp N1          &kp N2         &kp N3          &kp N4           &kp N5                       &kp N6  &kp N7           &kp N8           &kp N9         &kp N0
 &mt LWIN PSCRN  &mt LALT HOME  &mt LCTRL UP    &mt LSHFT END    &kp PG_UP  &trans    &trans  &none   &mt RSHFT GRAVE  &mt RCTRL EQUAL  &mt RALT SEMI  &kp SQT
-&mt LWIN INS    &mt LALT LEFT  &mt LCTRL DOWN  &mt LSHFT RIGHT  &kp PG_DN  &trans    &trans  &none   &kp RSHFT        &mt RCTRL LBKT   &mt RALT RBKT  &kp BSLH
+&mt LWIN INS    &mt LALT LEFT  &mt LCTRL DOWN  &mt LSHFT RIGHT  &kp PG_DN  &trans    &trans  &none   &kp RSHFT        &mt RCTRL LBKT   &mt RALT RBKT  &mt LWIN BSLH
 &trans          &trans         &trans          &trans           &trans     &trans    &trans  &trans                                                   &trans
             >;
         };
