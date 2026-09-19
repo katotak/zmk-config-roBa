@@ -11,17 +11,17 @@ layers:
   - I
   - O
   - P
-  - {t: A, h: LWIN}
-  - {t: S, h: LALT}
+  - A
+  - S
   - {t: D, h: LCTRL}
   - {t: F, h: LSHFT}
   - G
-  - '&td_ind'
-  - '&td_lang'
+  - LANG2
+  - LANG1
   - H
   - {t: J, h: RSHFT}
   - {t: K, h: RCTRL}
-  - {t: L, h: LALT}
+  - L
   - {t: '-', h: SCROLL}
   - {t: Z, h: LWIN}
   - {t: X, h: LALT}
@@ -38,7 +38,7 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - Ctl+SPACE
   - {t: SPACE, h: NUMSYM}
   - {t: ENTER, h: FUNCTION}
   - {t: BSPC, h: FUNCTION}
@@ -55,8 +55,8 @@ layers:
   - '8'
   - '9'
   - '0'
-  - {t: PSCRN, h: LWIN}
-  - {t: HOME, h: LALT}
+  - PSCRN
+  - HOME
   - {t: UP, h: LCTRL}
   - {t: END, h: LSHFT}
   - PG UP
@@ -65,7 +65,7 @@ layers:
   - ''
   - {t: '`', h: RSHFT}
   - {t: '=', h: RCTRL}
-  - {t: ;, h: RALT}
+  - ;
   - ''''
   - {t: INS, h: LWIN}
   - {t: LEFT, h: LALT}
@@ -107,9 +107,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - PSCRN
-  - {t: HOME, h: LALT}
-  - {t: UP, h: LCTRL}
-  - {t: END, h: LSHFT}
+  - HOME
+  - UP
+  - END
   - PG UP
   - F11
   - F12
@@ -119,9 +119,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - INS
-  - {t: LEFT, h: LALT}
-  - {t: DOWN, h: LCTRL}
-  - {t: RIGHT, h: LSHFT}
+  - LEFT
+  - DOWN
+  - RIGHT
   - PG DN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -218,7 +218,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&td_ind'
   - {type: held}
 combos:
 - p: [0, 1]
